@@ -4,14 +4,15 @@ $fn=100;
 
 module innenLeben(h=25) {
   translate([0,0,h])  {
-    // Gewinde 1/4 Zoll
-    cylinder(15,11.5/2,11.5/2,false);
+    // Gewindeeinsatz
+    cylinder(15,11.5/2,11.5/2,false);  
+
     // kegel  
     translate([0,0,-2])
       cylinder(2,0,11.5/2,false);
     // luftrohr
-    translate([3,0,-25])
-      cylinder(25,1,1,false);
+    translate([3,0,-26])
+      cylinder(27,1,1,false);
   }
   // Flaschenhalterung
   translate([0,0,h-25])  {
@@ -36,14 +37,17 @@ module aussenLeben(h=2) {
     cylinder(2,13/2,13/2,false);
 }
 
-  //innenLeben();
-
-/*
 difference() {
   aussenLeben();
   innenLeben();
 }
-*/
 
-metric_thread (diameter=8, pitch=1, length=4);
+translate([0,0,30])  {
+  // M8 Gewinde
+  difference() {
+    cylinder(8,11.5/2,11.5/2,false);
+    metric_thread(diameter=8, pitch=1, length=10);
+  }
+}
+
 
