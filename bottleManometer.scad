@@ -82,10 +82,13 @@ module gewindeM8(h=10) {
   }
 }
 
+module bottleManometer1() {
+  difference() {
+    aussenLeben();
+    innenLeben2();
+  }
 
-difference() {
-  aussenLeben();
-  innenLeben2();
+  gewindeM8();
 }
 
-gewindeM8();
+bottleManometer1();
