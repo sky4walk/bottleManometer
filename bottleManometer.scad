@@ -54,13 +54,14 @@ module innenLeben2(h=0) {
 }
 module innenLeben3() {
   // Gewindeeinsatz
-  translate([(27-11)/2,0,7+2+5.1])
-    metric_thread(diameter=8, pitch=1, length=7);
+  translate([(27-12.5)/2,0,7+2+5.1])
+    metric_thread(diameter=10, pitch=1, length=7);
 //    cylinder(7,11/2,11/2,false);  
   // Rohr
-  rotate([0,29.7,0])
-    translate([0,0,-1])  
-      cylinder(22,1,1);
+//  rotate([0,29.7,0])
+  rotate([0,35,0])
+    translate([-2,0,-2])  
+      cylinder(24,1,1);
   // Flaschenhalterung  
   rotate([90,-90,0])
     translate([14,0,-20])
@@ -87,7 +88,7 @@ module aussenLeben2(h=0) {
   translate([0,0,h+2])
     cylinder(7,0,27/2,false);
   translate([0,0,h+2])
-    cylinder(2,7/2,7/2,false);    
+    cylinder(2,8/2,8/2,false);    
   translate([0,0,h])
     cylinder(2,10/2,10/2,false);    
 }
