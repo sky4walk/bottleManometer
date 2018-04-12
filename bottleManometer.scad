@@ -55,7 +55,7 @@ module innenLeben2(h=0) {
 module innenLeben3() {
   // Gewindeeinsatz
   translate([(27-12.5)/2,0,7+2+5.1])
-    metric_thread(diameter=10, pitch=1, length=7);
+    metric_thread(diameter=9.7, pitch=1, length=7);
 //    cylinder(7,11/2,11/2,false);  
   // Rohr
 //  rotate([0,29.7,0])
