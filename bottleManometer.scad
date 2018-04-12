@@ -122,4 +122,9 @@ module bottleManometer2() {
   }
 }
 
+difference() {
  bottleManometer2();
+ translate([-15,0,-1]) {     
+  cube([30,30,30]);   
+ }
+}
