@@ -62,14 +62,23 @@ module innenLeben3() {
   rotate([0,35,0])
     translate([-2,0,-2])  
       cylinder(24,1,1);
-  // Flaschenhalterung  
+  // Flaschenhalterung
+  /*  
   rotate([90,-90,0])
     translate([13,0,-20])
       minkowski() {
         cube([10,0.1,40]);
         cylinder(r=1.9,h=2);  
-     }      
-  
+     }
+  */    
+  translate([7.5,0,0]){
+    rotate([90,-120,0])
+      translate([15,0,-20])
+        minkowski() {
+          cube([10,0.1,40]);
+          cylinder(r=1.9,h=2);  
+        }  
+  }
 }
 module aussenLeben(h=2) {    
   translate([0,0,12.5+h])  {
@@ -124,5 +133,5 @@ module bottleManometer2() {
 
 difference() {
  bottleManometer2();
-// translate([-15,0,-1])   cube([30,30,30]);    
+//translate([-15,0,-1])   cube([30,30,30]);    
 }
