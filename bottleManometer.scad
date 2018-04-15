@@ -70,13 +70,13 @@ module innenLeben3() {
         cube([10,0.1,40]);
         cylinder(r=1.9,h=2);  
      }
-  */    
-  translate([7.5,0,0]){
+  */     
+  translate([7.5,0,0.5]){
     rotate([90,-120,0])
       translate([15,0,-20])
         minkowski() {
           cube([10,0.1,40]);
-          cylinder(r=1.9,h=2);  
+          cylinder(r=1.8,h=2);  
         }  
   }
 }
